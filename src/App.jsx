@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   return(
-    <BrowserRouter>
+    <BrowserRouter basename='/clara-portfolio'>
       <nav>
         <NavLink  to='/' className={({isActive})=> isActive ? "botao ativo" : "botao" }>Home</NavLink>
         <NavLink  to='/sobre' className={({isActive})=> isActive ? "botao ativo" : "botao" }>Sobre Mim</NavLink>
