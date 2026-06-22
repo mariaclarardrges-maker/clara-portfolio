@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Chivo;
+}
+
+:root {
+  --slate: #18191D;
+  --lilac: #d4bcc9;
+}
+
+#root {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  height: 3.5rem;
+  justify-content: center;
+  width: fit-content;
+  border: 2px solid rgba(255, 255, 255, 0.397);
+  margin: auto;
+  border-radius: 200rem;
+  margin-top: 1rem;
+  gap: 5rem;
+}
+
+.botao {
+  min-height: 3.5rem;
+  height: 3.5rem;
+  width: 7.5rem;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 200ms;
+  color: var(--lilac);
+  text-align: center;
+}
+
+.ativo,
+.botao:hover {
+  background-color: var(--lilac);
+  color: var(--slate);
+  text-underline-offset: 0.2rem;
+  text-decoration: underline 1px var(--slate) wavy;
+}
+
+.ativo:has(~.botao:hover),
+.botao:hover~.ativo {
+  background-color: #18191d00;
+  color: var(--lilac);
+
+}
+
+main {
+  min-height: calc(100vh - 3.5rem - 0.5rem - 1rem);
+  color: var(--lilac);
+}
+
+.home {
+  overflow: hidden;
+}
+
+.home>div {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  align-items: center;
+  margin-top: 5rem
+}
+
+h1 {
+  font-family: baron;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: lighter;
+}
+p{
+  font-family: "Source Code Pro";
+}
+.home .botao {
+  text-decoration: none;
+}
+
+.home .botao:hover, .tela .botao {
+  background-color: var(--slate);
+  color: var(--lilac);
+  text-underline-offset: 0.2rem;
+  text-decoration: underline 1px var(--lilac) wavy;
+}
+
+.informPessoal {
+  width: 25%;
+  text-overflow: clip;
+  word-wrap: break-word;
+  padding: 1rem;
+}
+
+.sobre{
+}
+.informPessoal>*:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.sobremi{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.gato{
+  height: 8rem;
+  width: 8rem;
+}
+.tela div{
+  background-color: var(--slate);
+  height: 15rem;
+  width: 25rem;
+  border-radius: 1rem;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.tela div p{
+  margin: 1rem;
+}
+.tela{
+  content: "";
+  width: 27rem;
+  min-height: 20rem;
+  background: var(--lilac);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  padding: 1rem 0 ;
+}
+.tela h2{
+  font-family: baron;
+  color: var(--slate);
+}
+.tela .botao:hover{
+  color: white;
+  text-decoration-color: white;
+}
+.projetos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem ;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+@font-face {
+  font-family: baron;
+  src: url("/fonts/baron_neue/Baron\ Neue\ Black.otf");
+}
